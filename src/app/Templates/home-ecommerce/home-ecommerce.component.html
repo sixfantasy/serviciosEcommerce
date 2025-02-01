@@ -5,14 +5,13 @@
   <option *ngFor="let product of products" value="{{product.id}}">{{product.nombre}}</option>
   <option value="-2">Nuevo producto</option>
 </select>
-<p>{{selectedoption}}</p>
 <div class="formulario">
   <input type="text" placeholder="Nombre del producto" [(ngModel)]="nombreForm">
   <input type="text" placeholder="Descripcion del producto" [(ngModel)]="descForm" name="" id="">
   <input type="text" placeholder="Colores del producto" [(ngModel)]="coloresForm" name="" id="">
   <input type="number" placeholder="Precio del producto" [(ngModel)]="precioForm" id="">
-  <button *ngIf="selectedoption != -2" (click)="actualizarProducto()">Actualizar Producto</button>
-  <button *ngIf="selectedoption == -2" (click)="crearProducto()">Crear Producto</button>
+  <button id="updateButton" *ngIf="selectedoption != -2" (click)="actualizarProducto()">Actualizar Producto</button>
+  <button id="createButton" *ngIf="selectedoption == -2" (click)="crearProducto()">Crear Producto</button>
   <br><br><br><br>
-  <button *ngIf="selectedoption != -2" (click)="eliminarProducto()">Eliminar producto</button>
+  <button id="deleteButton" *ngIf="selectedoption != -2" (click)="eliminarProducto()">Eliminar producto</button>
 </div>

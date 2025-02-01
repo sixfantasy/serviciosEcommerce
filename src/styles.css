@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --font-family: 'Arial, sans-serif';
-    --primary-color: #007bff;
-    --primary-hover: #0056b3;
+    --font-family: Roboto, sans-serif;
+    --primary-color: #4400fe;
+    --primary-hover: #0f024f;
+    --secondary-color: #300bb7;
     --disabled-color: #ccc;
     --background-color: #f9f9f9;
     --border-color: #ccc;
-    --text-color: #333;
+    --text-color: #adf4ff;
     --text-completed: green;
 
     --padding-small: 0.5rem;
@@ -18,4 +20,8 @@
     --font-size-large: 1.25rem;
 
     --max-width: 500px;
+  }
+
+  body {
+    margin: 0px;
   }

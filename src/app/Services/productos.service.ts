@@ -21,6 +21,9 @@ export class ProductosService{
   getProducts() {
    return this.products;
   }
+  getProductById(id: number) {
+    return this.products.find(product => product.id === id);
+  }
   updateProducts(id:number, product:{nombre?:string, descripcion?:string, colores?:string[], precio?:number}){
     const index = this.products.findIndex(p => p.id == id);
     if(index !== -1){

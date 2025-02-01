@@ -7,13 +7,19 @@ import { HomeEcommerceComponent } from './Templates/home-ecommerce/home-ecommerc
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { ProductoComponent } from './components/producto/producto.component';
+import { AboutUsComponent } from './Templates/about-us/about-us.component';
+import { LandingComponent } from './Templates/landing/landing.component';
+import { CartComponent } from './Templates/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeEcommerceComponent,
     HeaderComponent,
-    ProductoComponent
+    ProductoComponent,
+    AboutUsComponent,
+    LandingComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

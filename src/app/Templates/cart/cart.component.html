@@ -1,0 +1,18 @@
+
+<table>
+  <tr>
+    <th>Producto</th>
+    <th>Cantidad</th>
+    <th>Precio</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let item of cart.products">
+    <td>{{getTitle(item.id)}}</td>
+    <td>{{item.quantity}}</td>
+    <td>{{item.price}}</td>
+    <td><button (click)="anadir(item.id)">+</button></td>
+    <td><button (click)="eliminar(item.id)">-</button></td>
+  </tr>
+</table>
+<H1>Precio Total: {{calcularTotal()}}</H1>
