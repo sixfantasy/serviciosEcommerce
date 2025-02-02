@@ -1,3 +1,12 @@
+.productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: fit-content;
+  padding: 1rem;
+  gap: 1rem;
+  font-family: var(--font-family);
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -9,14 +18,15 @@
   width: 50%;
   box-sizing: border-box;
   margin: auto;
+  font-family: var(--font-family);
 }
-#updateButton{
+#updateButton {
   background-color: greenyellow;
 }
-#createButton{
+#createButton {
   background-color: greenyellow;
 }
-#deleteButton{
+#deleteButton {
   background-color: lightcoral;
 }
 select {
@@ -26,4 +36,19 @@ select {
   margin: 1rem auto;
 }
 
+@media screen and (max-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+  .productos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

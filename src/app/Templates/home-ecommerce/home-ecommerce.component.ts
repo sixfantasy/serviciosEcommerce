@@ -30,7 +30,10 @@ export class HomeEcommerceComponent implements OnInit {
 
     this.productService.updateProducts(this.selectedoption, producto);
     this.products = this.productService.getProducts();
-
+      this.nombreForm = '';
+      this.descForm = '';
+      this.precioForm = 0;
+      this.coloresForm = '';
   }
   crearProducto() {
     if (
@@ -50,8 +53,10 @@ export class HomeEcommerceComponent implements OnInit {
       this.descForm = '';
       this.precioForm = 0;
       this.coloresForm = '';
+      alert('Crear Enviado');
     }
-    alert('Crear Enviado')
+    else
+     alert('Faltan datos');
     this.products = this.productService.getProducts();
 
   }

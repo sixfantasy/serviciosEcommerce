@@ -3,5 +3,5 @@
   <p class="descripcion">{{producto?.descripcion}}</p>
   <p class="colores">{{producto?.colores}}</p>
   <p [class]="'precio '+colorClass"> {{producto?.precio}} €</p>
-  <button (click)="addProductToCart()">Agregar al carrito</button>
+  <button class="addCartButton" (click)="addProductToCart()">Agregar al carrito</button>
 </div>

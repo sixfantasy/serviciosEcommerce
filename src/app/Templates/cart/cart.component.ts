@@ -30,4 +30,8 @@ export class CartComponent {
   calcularTotal() {
     return this._shoppingCartService.calculateTotal();
   }
+  comprar(){
+    this._shoppingCartService.clearCart();
+    alert('Compra simulada')
+  }
 }

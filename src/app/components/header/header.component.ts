@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ShoppingCartService } from './../../Services/shopping-cart.service';
+import { Component, computed, Signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  productsInCart: Signal<number>;
+  constructor(private _shoppingCartService: ShoppingCartService){
+    this.productsInCart = computed(() => _shoppingCartService.countSignal())
+  }
 }

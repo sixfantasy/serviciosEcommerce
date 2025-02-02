@@ -3,5 +3,5 @@
   <a routerLink="home"> Inicio </a>
   <a routerLink="shop"> Tienda </a>
   <a routerLink="about"> Sobre nosotros </a>
-  <a routerLink="cart"> Carrito </a>
+  <a routerLink="cart"> Carrito <span id="productNotif" *ngIf="productsInCart()">{{productsInCart()}}</span> </a>
 </nav>
